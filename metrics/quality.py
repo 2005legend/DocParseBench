@@ -76,15 +76,16 @@ class QualityEvaluator:
         return headings
 
     def _evaluate_heading_hierarchy(self, ref_text: str, hyp_text: str) -> float:
-        ref_headings = [h[0] for h in self._extract_headings(ref_text)]
-        hyp_headings = [h[0] for h in self._extract_headings(hyp_text)]
+        # Compare the actual text of the headings (lowercased) rather than the absolute number of '#'
+        # This handles cases where LlamaParse uses '#' but Docling uses '##' for the same headings.
+        ref_headings = [h[1].lower() for h in self._extract_headings(ref_text)]
+        hyp_headings = [h[1].lower() for h in self._extract_headings(hyp_text)]
         
         if not ref_headings and not hyp_headings:
             return 1.0
         if not ref_headings:
             return 0.0
             
-        # LCS of heading levels
         sm = difflib.SequenceMatcher(None, ref_headings, hyp_headings)
         return sm.ratio()
 
