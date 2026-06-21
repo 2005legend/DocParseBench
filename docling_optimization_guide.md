@@ -74,7 +74,17 @@ def run_docling_batched(pdf_path, batch_size=5):
 
 ## 4. Why This Architecture Works
 
-By implementing this architecture, **memory usage becomes approximately constant regardless of PDF length.** You are effectively trading *Time* for *Stability*.
+By implementing this architecture, **peak memory stays roughly constant because you're only handling a small subset of pages at once.** This is exactly the approach recommended for long PDFs.
+
+> [!WARNING]
+> **What does NOT become infinite:**
+> Even with batching:
+> 1. Runtime grows linearly.
+> 2. Output markdown grows linearly.
+> 3. Storage requirements grow.
+> 4. Some PDFs may contain huge images or complex vector graphics that increase memory needs for a single page.
+>
+> **Important Caveat:** Docling can process arbitrarily large PDFs if batch/page-range processing is used, *assuming sufficient disk space and processing time.* A 5000-page PDF might take hours, but it shouldn't crash purely because of document length if batching is implemented correctly.
 
 *   **Recommended Batch Size:** 5 pages. This keeps RAM usage well under 4GB during the conversion process, allowing it to comfortably fit on a 16GB system (or a 4GB VRAM GPU) while leaving room for the OS.
 *   **Production Architecture:** For enterprise RAG pipelines, this chunking strategy allows you to use cheaper, low-memory instances (like AWS t3.medium or Lambda) to sequentially chew through massive documents over time, drastically reducing cloud compute costs.

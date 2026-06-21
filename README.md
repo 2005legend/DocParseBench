@@ -9,9 +9,23 @@
 
 <br/>
 
-**DocParseBench** (or *PDFParserArena*) is a rigorous evaluation suite designed specifically for **Retrieval-Augmented Generation (RAG)** pipelines. 
+**DocParseBench** is a **production-focused benchmarking framework for PDF parsers and RAG ingestion pipelines.**
 
-Unlike traditional OCR benchmarks that only measure extraction quality, DocParseBench emphasizes **Operational and Deployment Characteristics**. When building production systems, you need to know not just how accurate a parser is, but how much RAM it will consume, how fast it runs, and at what scale it fails.
+When building production systems, you need to know not just how accurate a parser is, but how much RAM it will consume, how fast it runs, and at what scale it fails.
+
+---
+
+## 📈 Scalability Matrix
+
+This benchmark emphasizes *scalability engineering*. Heavy vision models can process anything if batched correctly.
+
+| Parser | 100 Pages | 500 Pages | 1000 Pages | 5000 Pages |
+|---|---|---|---|---|
+| **Docling (default)** | ✅ | ❌ (OOM) | ❌ (OOM) | ❌ (OOM) |
+| **Docling (batched)** | ✅ | ✅ | ✅ | ✅ |
+| **LiteParse** | ✅ | ✅ | ✅ | ✅ |
+
+*Note: Docling can process arbitrarily large PDFs if batch/page-range processing is used, assuming sufficient disk space and processing time. Runtime and storage will grow linearly, but peak memory stays roughly constant.*
 
 ---
 
