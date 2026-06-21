@@ -1,7 +1,8 @@
 <div align="center">
-  <h1>📄 DocParseBench</h1>
-  <p><b>A Comprehensive Benchmarking Arena for Modern PDF Parsing & Extraction Frameworks</b></p>
-  
+  <h1>📊 DocParseBench</h1>
+
+> **"Can modern PDF parsers scale to enterprise-sized documents on commodity hardware?"**
+
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
   [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100/)
   [![CI](https://github.com/placeholder/DocParseBench/actions/workflows/benchmark.yml/badge.svg)](https://github.com/placeholder/DocParseBench/actions)
