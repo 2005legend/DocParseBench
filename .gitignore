@@ -1,3 +1,48 @@
-.env
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+.venv
+ENV/
+
+# Environment Variables
+.env
+.env.local
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Datasets and Outputs (Avoid committing massive files or secrets)
+datasets/pdfs/*.pdf
+datasets/ground_truth/*.md
+results/
+reports/
+!reports/.gitkeep
+!results/.gitkeep
+
+# System
+.DS_Store
+Thumbs.db

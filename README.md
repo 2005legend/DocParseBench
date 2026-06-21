@@ -1,52 +1,92 @@
-# DocParseBench / PDFParserArena
+<div align="center">
+  <h1>📄 DocParseBench</h1>
+  <p><b>A Comprehensive Benchmarking Arena for Modern PDF Parsing & Extraction Frameworks</b></p>
+  
+  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+  [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100/)
+  [![CI](https://github.com/placeholder/DocParseBench/actions/workflows/benchmark.yml/badge.svg)](https://github.com/placeholder/DocParseBench/actions)
+</div>
 
-A comprehensive benchmarking repository to evaluate popular PDF parsing and extraction tools for RAG (Retrieval-Augmented Generation) pipelines. 
+<br/>
 
-## Included Parsers
-*   **Docling** - State-of-the-art vision models for document understanding.
-*   **LiteParse** - High-speed, native PDF text stream extraction.
-*   **PyMuPDF / PyMuPDF4LLM** - Fast, layout-aware extraction.
-*   **LlamaParse** - Cloud-based API for complex document extraction.
-*   **Marker** - (Note: Requires C++ Build Tools for local compilation on some OS/Python combos).
+**DocParseBench** (or *PDFParserArena*) is a rigorous evaluation suite designed specifically for **Retrieval-Augmented Generation (RAG)** pipelines. 
 
-## The Benchmark Leaderboard
+Unlike traditional OCR benchmarks that only measure extraction quality, DocParseBench emphasizes **Operational and Deployment Characteristics**. When building production systems, you need to know not just how accurate a parser is, but how much RAM it will consume, how fast it runs, and at what scale it fails.
 
-We test these parsers based on **Speed**, **RAM Usage**, and qualitative metrics like **Table Extraction** and **OCR Quality**.
+---
 
-*To see the latest hardware execution times, check `leaderboard.md`.*
+## 🏆 Current Leaderboard Snapshot
 
-| Metric | Docling | LiteParse | PyMuPDF | LlamaParse | Marker |
+*Note: Below is an estimation snapshot. Run the orchestrator locally on your hardware to generate your specific performance bounds.*
+
+| Parser | Speed | Peak RAM | Tables Fidelity | OCR Quality | RAG Suitability |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Speed** | Slow (~3s/page) | Very Fast | Fast | Varies (API) | Slow |
-| **Peak RAM** | High (GBs) | Low (MBs) | Low (MBs) | Low (API) | High (GBs) |
-| **Tables** | Excellent | Poor | Medium | Excellent | Excellent |
-| **OCR** | Excellent | None | None | Excellent | Excellent |
-| **RAG Quality**| High | Low/Medium | Medium | High | High |
+| **LlamaParse (API)** | Varies | Low (Cloud) | 🟢 Excellent | 🟢 Excellent | High |
+| **Docling** | 🔴 Slow (~3s/pg) | 🔴 High (>4GB) | 🟢 Excellent | 🟢 Excellent | High |
+| **Marker** | 🔴 Slow | 🔴 High | 🟢 Excellent | 🟢 Excellent | High |
+| **PyMuPDF4LLM** | 🟡 Fast | 🟢 Low | 🟡 Medium | 🔴 None | Medium |
+| **LiteParse** | 🟢 Very Fast | 🟢 Low | 🔴 Poor | 🔴 None | Low/Medium |
 
 ---
 
-## 🚀 The Docling Memory Guide
+## 🏗️ Architecture & Metrics Engine
 
-Are you experiencing `std::bad_alloc` or `CUDA Out of Memory` crashes when running **Docling** on large PDFs (50+ pages)? 
+We built the runner using **Isolated Subprocesses** and a background **`psutil` Profiler** thread. This prevents massive memory leaks (common in vision models) from bleeding across documents and destroying the orchestrator.
 
-Check out our definitive guide on how to architect a chunking pipeline to run Docling on any PDF size with just 16GB of RAM or an RTX 3050. 
-👉 [**Read the Docling Memory Optimization Guide here**](./docling_optimization_guide.md)
+### ⚙️ Evaluated Metrics
+1. **Performance**: Pages per Second, Peak RAM (RSS) tracking, CPU Utilization, Output File Size.
+2. **Advanced Quality**:
+    - **Word Error Rate (WER)**: Native dynamic programming evaluation of insertions, deletions, substitutions against Ground Truth.
+    - **Table Extraction Fidelity**: Extraction of all Markdown tables to verify row recovery rates and table counts.
+    - **Heading Hierarchy Preservation**: Longest Common Subsequence of `H1, H2, H3` to ensure semantic structure remains intact.
+    - **Reading Order Preservation**: Proxy hash sequencing to catch errant column reading.
+
+### 📂 Supported Document Categories
+The benchmark is structured to test against a diverse set of real-world layouts:
+1. Financial Reports (10-Ks, 10-Qs)
+2. Scientific Papers (ArXiv)
+3. Scanned Documents
+4. Presentation Slides
+5. Legal Contracts
+6. Forms & Invoices
 
 ---
 
-## How to Run the Benchmark Locally
+## 🚀 Quickstart
 
-**1. Install dependencies**
+**1. Clone and Install**
 ```bash
+git clone https://github.com/yourusername/DocParseBench.git
+cd DocParseBench
 pip install -r requirements.txt
 ```
 *(Note: To test Marker on Windows, you must install the Microsoft C++ Build Tools first).*
 
-**2. Add your LlamaParse API Key**
-Update the key in `parsers/llamaparse/runner.py`.
-
-**3. Execute the Orchestrator**
+**2. Configure API Keys**
+Create a `.env` file at the root of the project to authenticate cloud parsers:
 ```bash
-python benchmarks/run_all.py
+LLAMA_CLOUD_API_KEY="your_llamaparse_key_here"
 ```
-Outputs will be saved in the `results/` folder, and hardware execution metrics will be updated in `leaderboard.md`.
+
+**3. Generate Ground Truth (Optional Bootstrapping)**
+If you are adding new PDFs to `datasets/pdfs/` and don't have human-annotated Ground Truth, you can auto-generate a baseline using LlamaParse:
+```bash
+python scripts/generate_ground_truth.py
+```
+
+**4. Execute the Benchmark Arena**
+```bash
+python benchmarks/runner.py --output-dir results
+```
+This spawns isolated processes for each parser and safely captures resource usage.
+
+**5. Generate the Final Report**
+```bash
+python benchmarks/report_builder.py
+```
+Outputs a pristine Markdown table summarizing WER, Table Fidelity, Speed, and RAM usage into `reports/report.md`.
+
+---
+
+## 📚 Guides
+- 👉 [**The Docling Memory Optimization Guide**](./docling_optimization_guide.md): How to architect a chunking pipeline to run Docling on any PDF size without crashing.

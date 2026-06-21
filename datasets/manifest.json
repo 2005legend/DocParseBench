@@ -1,0 +1,81 @@
+{
+  "datasets": [
+    {
+      "id": "0000021344-24-000009",
+      "category": "General",
+      "file_path": "pdfs/0000021344-24-000009.pdf",
+      "pages": 146,
+      "ground_truth_path": "ground_truth/0000021344-24-000009.md"
+    },
+    {
+      "id": "10-Q4-2024-As-Filed",
+      "category": "Financial Reports",
+      "file_path": "pdfs/10-Q4-2024-As-Filed.pdf",
+      "pages": 121,
+      "ground_truth_path": "ground_truth/10-Q4-2024-As-Filed.md"
+    },
+    {
+      "id": "1706.03762v7",
+      "category": "Scientific Papers",
+      "file_path": "pdfs/1706.03762v7.pdf",
+      "pages": 15,
+      "ground_truth_path": "ground_truth/1706.03762v7.md"
+    },
+    {
+      "id": "NASDAQ_AAPL_2023",
+      "category": "Financial Reports",
+      "file_path": "pdfs/NASDAQ_AAPL_2023.pdf",
+      "pages": 80,
+      "ground_truth_path": "ground_truth/NASDAQ_AAPL_2023.md"
+    },
+    {
+      "id": "NASDAQ_AAPL_2024",
+      "category": "Financial Reports",
+      "file_path": "pdfs/NASDAQ_AAPL_2024.pdf",
+      "pages": 121,
+      "ground_truth_path": "ground_truth/NASDAQ_AAPL_2024.md"
+    },
+    {
+      "id": "NASDAQ_AAPL_2025",
+      "category": "Financial Reports",
+      "file_path": "pdfs/NASDAQ_AAPL_2025.pdf",
+      "pages": 80,
+      "ground_truth_path": "ground_truth/NASDAQ_AAPL_2025.md"
+    },
+    {
+      "id": "p1220_accessible",
+      "category": "General",
+      "file_path": "pdfs/p1220_accessible.pdf",
+      "pages": 162,
+      "ground_truth_path": "ground_truth/p1220_accessible.md"
+    },
+    {
+      "id": "p16_accessible",
+      "category": "General",
+      "file_path": "pdfs/p16_accessible.pdf",
+      "pages": 382,
+      "ground_truth_path": "ground_truth/p16_accessible.md"
+    },
+    {
+      "id": "p962sp_accessible",
+      "category": "General",
+      "file_path": "pdfs/p962sp_accessible.pdf",
+      "pages": 2,
+      "ground_truth_path": "ground_truth/p962sp_accessible.md"
+    },
+    {
+      "id": "sample_5_pages",
+      "category": "General",
+      "file_path": "pdfs/sample_5_pages.pdf",
+      "pages": 5,
+      "ground_truth_path": "ground_truth/sample_5_pages.md"
+    },
+    {
+      "id": "_10-K-2025-As-Filed",
+      "category": "Financial Reports",
+      "file_path": "pdfs/_10-K-2025-As-Filed.pdf",
+      "pages": 80,
+      "ground_truth_path": "ground_truth/_10-K-2025-As-Filed.md"
+    }
+  ]
+}
