@@ -7,6 +7,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from metrics.speed import SpeedMonitor
 from metrics.memory import PeakMemoryMonitor
+from metrics.diff_tool import calculate_diff_and_similarity
 
 # Import the runners
 import parsers.docling.runner as docling_runner
@@ -55,19 +56,32 @@ if __name__ == "__main__":
         
     results = []
     
-    # Execute each parser
+    # Execute Docling first to serve as the baseline
+    results.append(execute_benchmark("Docling", docling_runner.parse))
+    
+    # Execute others
     results.append(execute_benchmark("LiteParse", liteparse_runner.parse))
     results.append(execute_benchmark("PyMuPDF", pymupdf_runner.parse))
-    results.append(execute_benchmark("Docling", docling_runner.parse))
     results.append(execute_benchmark("LlamaParse", llamaparse_runner.parse))
     
+    # Calculate Diffs
+    docling_output = os.path.join(OUTPUT_DIR, "docling_output.md")
+    for r in results:
+        if r['name'] == "Docling":
+            r['similarity'] = "100.00% (Baseline)"
+            continue
+        
+        target_output = os.path.join(OUTPUT_DIR, f"{r['name'].lower()}_output.md")
+        diff_file = os.path.join(OUTPUT_DIR, f"{r['name'].lower()}_vs_docling_diff.txt")
+        r['similarity'] = calculate_diff_and_similarity(docling_output, target_output, diff_file)
+        
     # Save the leaderboard
     with open("leaderboard.md", "w", encoding="utf-8") as f:
         f.write("# DocParseBench Leaderboard\n\n")
         f.write("Target: `sample_5_pages.pdf`\n\n")
-        f.write("| Parser | Status | Speed | Peak RAM |\n")
-        f.write("|--------|--------|-------|----------|\n")
+        f.write("| Parser | Status | Speed | Peak RAM | Similarity to Docling |\n")
+        f.write("|--------|--------|-------|----------|-----------------------|\n")
         for r in results:
-            f.write(f"| {r['name']} | {r['status']} | {r['time']:.2f}s | {r['ram']:.2f} MB |\n")
+            f.write(f"| {r['name']} | {r['status']} | {r['time']:.2f}s | {r['ram']:.2f} MB | {r.get('similarity', 'N/A')} |\n")
             
     print("\nBenchmark complete! Results saved to leaderboard.md and outputs in results/")

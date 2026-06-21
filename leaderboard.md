@@ -2,9 +2,9 @@
 
 Target: `sample_5_pages.pdf`
 
-| Parser | Status | Speed | Peak RAM |
-|--------|--------|-------|----------|
-| LiteParse | Failed | 0.02s | 18.85 MB |
-| PyMuPDF | Success | 7.19s | 348.68 MB |
-| Docling | Success | 42.46s | 2313.96 MB |
-| LlamaParse | Success | 33.61s | 2219.50 MB |
+| Parser | Status | Speed | Peak RAM | Similarity to Docling |
+|--------|--------|-------|----------|-----------------------|
+| Docling | Success | 40.23s | 2038.34 MB | 100.00% (Baseline) |
+| LiteParse | Failed | 0.01s | 1890.41 MB | 0.41% |
+| PyMuPDF | Success | 2.60s | 2157.53 MB | 53.38% |
+| LlamaParse | Success | 8.11s | 2215.55 MB | 56.64% |

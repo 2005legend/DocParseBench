@@ -1,0 +1,375 @@
+--- Baseline (Docling)
++++ Target
+@@ -1,10 +1,19 @@
+-(Mark One)
+-
+-☒ ANNUAL REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934
+-
+-For the fiscal year ended December 31, 2023 OR
+-
+-- [ ] ☐ TRANSITION REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934
+-
+-For the transition period from            to
++
++# UNITED STATES SECURITIES AND EXCHANGE COMMISSION
++
++# WASHINGTON, D.C. 20549
++
++# FORM 10-K
++
++# (Mark One)
++
++☒  ANNUAL REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934
++
++For the fiscal year ended December 31, 2023
++
++OR
++
++☐  TRANSITION REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934
++
++For the transition period from   to
+ 
+@@ -12,3 +21,3 @@
+ 
+-<!-- image -->
++# THE Coca-Cola COMPANY
+ 
+@@ -18,9 +27,5 @@
+ 
+-Delaware
+-
+-58-0628465
+-
+-(State or other jurisdiction of incorporation)
+-
+-(I.R.S. Employer Identification No.)
++| Delaware                                       | 58-0628465                           |
++| ---------------------------------------------- | ------------------------------------ |
++| (State or other jurisdiction of incorporation) | (I.R.S. Employer Identification No.) |
+ 
+@@ -28,32 +33,28 @@
+ 
+-Atlanta, Georgia
+-
+-30313
+-
+-(Address of principal executive offices)
+-
+-(Zip Code)
+-
+-Registrant's telephone number, including area code: (404) 676-2121
+-
+-Securities registered pursuant to Section 12(b) of the Act:
+-
+-| Title of each class           | Trading Symbol(s)   | Name of each exchange on which registered   |
+-|-------------------------------|---------------------|---------------------------------------------|
+-| Common Stock, $0.25 Par Value | KO                  | New York Stock Exchange                     |
+-| 0.500% Notes Due 2024         | KO24                | New York Stock Exchange                     |
+-| 1.875% Notes Due 2026         | KO26                | New York Stock Exchange                     |
+-| 0.750% Notes Due 2026         | KO26C               | New York Stock Exchange                     |
+-| 1.125% Notes Due 2027         | KO27                | New York Stock Exchange                     |
+-| 0.125% Notes Due 2029         | KO29A               | New York Stock Exchange                     |
+-| 0.125% Notes Due 2029         | KO29B               | New York Stock Exchange                     |
+-| 0.400% Notes Due 2030         | KO30B               | New York Stock Exchange                     |
+-| 1.250% Notes Due 2031         | KO31                | New York Stock Exchange                     |
+-| 0.375% Notes Due 2033         | KO33                | New York Stock Exchange                     |
+-| 0.500% Notes Due 2033         | KO33A               | New York Stock Exchange                     |
+-| 1.625% Notes Due 2035         | KO35                | New York Stock Exchange                     |
+-| 1.100% Notes Due 2036         | KO36                | New York Stock Exchange                     |
+-| 0.950% Notes Due 2036         | KO36A               | New York Stock Exchange                     |
+-| 0.800% Notes Due 2040         | KO40B               | New York Stock Exchange                     |
+-| 1.000% Notes Due 2041         | KO41                | New York Stock Exchange                     |
++Atlanta, Georgia 30313
++
++(Address of principal executive offices) (Zip Code)
++
++Registrant’s telephone number, including area code: (404) 676-2121
++
++# Securities registered pursuant to Section 12(b) of the Act:
++
++| Title of each class           | Trading Symbol(s) | Name of each exchange on which registered |
++| ----------------------------- | ----------------- | ----------------------------------------- |
++| Common Stock, $0.25 Par Value | KO                | New York Stock Exchange                   |
++| 0.500% Notes Due 2024         | KO24              | New York Stock Exchange                   |
++| 1.875% Notes Due 2026         | KO26              | New York Stock Exchange                   |
++| 0.750% Notes Due 2026         | KO26C             | New York Stock Exchange                   |
++| 1.125% Notes Due 2027         | KO27              | New York Stock Exchange                   |
++| 0.125% Notes Due 2029         | KO29A             | New York Stock Exchange                   |
++| 0.125% Notes Due 2029         | KO29B             | New York Stock Exchange                   |
++| 0.400% Notes Due 2030         | KO30B             | New York Stock Exchange                   |
++| 1.250% Notes Due 2031         | KO31              | New York Stock Exchange                   |
++| 0.375% Notes Due 2033         | KO33              | New York Stock Exchange                   |
++| 0.500% Notes Due 2033         | KO33A             | New York Stock Exchange                   |
++| 1.625% Notes Due 2035         | KO35              | New York Stock Exchange                   |
++| 1.100% Notes Due 2036         | KO36              | New York Stock Exchange                   |
++| 0.950% Notes Due 2036         | KO36A             | New York Stock Exchange                   |
++| 0.800% Notes Due 2040         | KO40B             | New York Stock Exchange                   |
++| 1.000% Notes Due 2041         | KO41              | New York Stock Exchange                   |
+ 
+@@ -61,100 +62,116 @@
+ 
+-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+-
+-## UNITED STATES SECURITIES AND EXCHANGE COMMISSION
+-
+-WASHINGTON, D.C. 20549
+-
+-## FORM 10-K
+-
+-Indicate by check mark if the Registrant is a well-known seasoned issuer, as defined in Rule 405 of the Securities Act. Yes ☒
+-
+-- [ ] No ☐
+-
+-Indicate by check mark if the Registrant is not required to file reports pursuant to Section 13 or Section 15(d) of the Act. Yes ☐
+-
+-- [x] No ☒
+-
+-Indicate by check mark whether the Registrant (1) has filed all reports required to be filed by Section 13 or 15(d) of the Securities Exchange Act of 1934 during the preceding 12 months (or for such shorter period that the Registrant was required to file such reports), and (2) has been subject to such filing requirements for the past 90 days. Yes ☒ No ☐
+-
+-Indicate by check mark whether the Registrant has submitted electronically every Interactive Data File required to be submitted pursuant to Rule 405 of Regulation S-T (§ 232.405 of this chapter) during the preceding 12 months (or for such shorter period that the Registrant was required to submit such files). Yes ☒ No ☐
+-
+-Indicate by check mark whether the Registrant is a large accelerated filer, an accelerated filer, a non-accelerated filer, a smaller reporting company or an emerging growth company. See the definitions of 'large accelerated filer,' 'accelerated filer,' 'smaller reporting company' and 'emerging growth company' in Rule 12b-2 of the Exchange Act.
+-
+-Large accelerated filer ☒
+-
+-- [ ] Accelerated filer ☐
+-
+-- [ ] Non-accelerated filer ☐
+-
+-- [ ] Smaller reporting company ☐
+-
+-- [ ] Emerging growth company ☐
+-
+-If an emerging growth company, indicate by check mark if the Registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. ☐
+-
+-Indicate by check mark whether the Registrant has filed a report on and attestation to its management's assessment of the effectiveness of its internal control over financial reporting under Section 404(b) of the Sarbanes-Oxley Act (15 U.S.C. 7262(b)) by the registered public accounting firm that prepared or issued its audit report. ☒
+-
+-If securities are registered pursuant to Section 12(b) of the Act, indicate by check mark whether the financial statements of the Registrant included in the filing reflect the correction of an error to previously issued financial statements. ☐
+-
+-Indicate by check mark whether any of those error corrections are restatements that required a recovery analysis of incentive-based compensation received by any of the Registrant's executive officers during the relevant recovery period pursuant to § 240.10D-1(b). ☐
+-
+-Indicate by check mark if the Registrant is a shell company (as defined in Rule 12b-2 of the Exchange Act). Yes
+-
+-- [ ] ☐
+-
+-- [x] No ☒
+-
+-The aggregate market value of the common equity held by non-affiliates of the Registrant (assuming for these purposes, but without conceding, that all executive officers and Directors are 'affiliates' of the Registrant) as of June 30, 2023, the last business day of the Registrant's most recently completed second fiscal quarter, was $258,329,040,018 (based on the closing sale price of the Registrant's Common Stock on that date as reported on the New York Stock Exchange).
+-
+-The number of shares outstanding of the Registrant's Common Stock as of February 16, 2024 was 4,312,456,168.
+-
+-## DOCUMENTS INCORPORATED BY REFERENCE
+-
+-Portions of the Company's Proxy Statement for the 2024 Annual Meeting of Shareowners are incorporated by reference in Part III.
+-
+-## THE COCA-COLA COMPANY AND SUBSIDIARIES
+-
+-## Table of Contents
+-
+-|          |                                                                                                              |   Page |
+-|----------|--------------------------------------------------------------------------------------------------------------|--------|
+-|          | Forward-Looking Statements                                                                                   |      2 |
+-| Part I   |                                                                                                              |        |
+-| Item 1.  | Business                                                                                                     |      2 |
+-| Item 1A. | Risk Factors                                                                                                 |     12 |
+-| Item 1B. | Unresolved Staff Comments                                                                                    |     26 |
+-| Item 1C. | Cybersecurity                                                                                                |     26 |
+-| Item 2.  | Properties                                                                                                   |     27 |
+-| Item 3.  | Legal Proceedings                                                                                            |     28 |
+-| Item 4.  | Mine Safety Disclosures                                                                                      |     31 |
+-| Item X.  | Information About Our Executive Officers                                                                     |     31 |
+-| Part II  |                                                                                                              |        |
+-| Item 5.  | Market for Registrant's Common Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities |     33 |
+-| Item 6.  | Reserved                                                                                                     |     34 |
+-| Item 7.  | Management's Discussion and Analysis of Financial Condition and Results of Operations                        |     34 |
+-| Item 7A. | Quantitative and Qualitative Disclosures About Market Risk                                                   |     58 |
+-| Item 8.  | Financial Statements and Supplementary Data                                                                  |     60 |
+-| Item 9.  | Changes in and Disagreements with Accountants on Accounting and Financial Disclosure                         |    129 |
+-| Item 9A. | Controls and Procedures                                                                                      |    129 |
+-| Item 9B. | Other Information                                                                                            |    129 |
+-| Item 9C. | Disclosure Regarding Foreign Jurisdictions That Prevent Inspections                                          |    129 |
+-| Part III |                                                                                                              |        |
+-| Item 10. | Directors, Executive Officers and Corporate Governance                                                       |    129 |
+-| Item 11. | Executive Compensation                                                                                       |    129 |
+-| Item 12. | Security Ownership of Certain Beneficial Owners and Management and Related Stockholder Matters               |    130 |
+-| Item 13. | Certain Relationships and Related Transactions, and Director Independence                                    |    130 |
+-| Item 14. | Principal Accountant Fees and Services                                                                       |    130 |
+-| Part IV  |                                                                                                              |        |
+-| Item 15. | Exhibits and Financial Statement Schedules                                                                   |    130 |
+-| Item 16. | Form 10-K Summary                                                                                            |    139 |
+-|          | Signatures                                                                                                   |    140 |
+-
+-## ITEM 1.  BUSINESS
+-
+-In this report, the terms 'The Coca-Cola Company,' 'Company,' 'we,' 'us' and 'our' mean The Coca-Cola Company and all entities included in our consolidated financial statements.
+-
+-## General
+-
+-The Coca-Cola Company is a total beverage company, and beverage products bearing our trademarks, sold in the United States since 1886, are now sold in more than 200 countries and territories. We own or license and market numerous beverage brands, which we group into the following categories: Trademark Coca-Cola; sparkling flavors; water, sports, coffee and tea; juice, value-added dairy and plant-based beverages; and emerging beverages. We own and market several of the world's largest nonalcoholic sparkling soft drink brands, including Coca-Cola, Sprite, Fanta, Coca-Cola Zero Sugar and Diet Coke/Coca-Cola Light.
++
++
++
++
++
++# Indicate by check mark if the Registrant is a well-known seasoned issuer, as defined in Rule 405 of the Securities Act.
++
++Yes ☒      No ☐
++
++# Indicate by check mark if the Registrant is not required to file reports pursuant to Section 13 or Section 15(d) of the Act.
++
++Yes ☐ No ☒
++
++# Indicate by check mark whether the Registrant (1) has filed all reports required to be filed by Section 13 or 15(d) of the Securities Exchange Act of 1934 during the preceding 12 months (or for such shorter period that the Registrant was required to file such reports), and (2) has been subject to such filing requirements for the past 90 days.
++
++Yes ☒  No ☐
++
++# Indicate by check mark whether the Registrant has submitted electronically every Interactive Data File required to be submitted pursuant to Rule 405 of Regulation S-T (§ 232.405 of this chapter) during the preceding 12 months (or for such shorter period that the Registrant was required to submit such files).
++
++Yes ☒  No ☐
++
++# Indicate by check mark whether the Registrant is a large accelerated filer, an accelerated filer, a non-accelerated filer, a smaller reporting company or an emerging growth company.
++
++See the definitions of “large accelerated filer,” “accelerated filer,” “smaller reporting company” and “emerging growth company” in Rule 12b-2 of the Exchange Act.
++
++Large accelerated filer ☒  Accelerated filer ☐  Non-accelerated filer  ☐                Smaller reporting company ☐            Emerging growth company ☐
++
++# If an emerging growth company, indicate by check mark if the Registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act.
++
++☐
++
++# Indicate by check mark whether the Registrant has filed a report on and attestation to its management’s assessment of the effectiveness of its internal control over financial reporting under Section 404(b) of the Sarbanes-Oxley Act (15 U.S.C. 7262(b)) by the registered public accounting firm that prepared or issued its audit report.
++
++☒
++
++# If securities are registered pursuant to Section 12(b) of the Act, indicate by check mark whether the financial statements of the Registrant included in the filing reflect the correction of an error to previously issued financial statements.
++
++☐
++
++# Indicate by check mark whether any of those error corrections are restatements that required a recovery analysis of incentive-based compensation received by any of the Registrant’s executive officers during the relevant recovery period pursuant to § 240.10D-1(b).
++
++☐
++
++# Indicate by check mark if the Registrant is a shell company (as defined in Rule 12b-2 of the Exchange Act).
++
++Yes ☐ No ☒
++
++# The aggregate market value of the common equity held by non-affiliates of the Registrant (assuming for these purposes, but without conceding, that all executive officers and Directors are “affiliates” of the Registrant) as of June 30, 2023, the last business day of the Registrant’s most recently completed second fiscal quarter, was $258,329,040,018 (based on the closing sale price of the Registrant’s Common Stock on that date as reported on the New York Stock Exchange).
++
++# The number of shares outstanding of the Registrant’s Common Stock as of February 16, 2024 was 4,312,456,168.
++
++# DOCUMENTS INCORPORATED BY REFERENCE
++
++Portions of the Company’s Proxy Statement for the 2024 Annual Meeting of Shareowners are incorporated by reference in Part III.
++
++
++
++
++
++THE COCA-COLA COMPANY AND SUBSIDIARIES
++# Table of Contents
++
++| Forward-Looking Statements                                                                                           | 2   |
++| -------------------------------------------------------------------------------------------------------------------- | --- |
++| **Part I**                                                                                                           |     |
++| Item 1. Business                                                                                                     | 2   |
++| Item 1A. Risk Factors                                                                                                | 12  |
++| Item 1B. Unresolved Staff Comments                                                                                   | 26  |
++| Item 1C. Cybersecurity                                                                                               | 26  |
++| Item 2. Properties                                                                                                   | 27  |
++| Item 3. Legal Proceedings                                                                                            | 28  |
++| Item 4. Mine Safety Disclosures                                                                                      | 31  |
++| Item X. Information About Our Executive Officers                                                                     | 31  |
++| **Part II**                                                                                                          |     |
++| Item 5. Market for Registrant’s Common Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities | 33  |
++| Item 6. Reserved                                                                                                     | 34  |
++| Item 7. Management’s Discussion and Analysis of Financial Condition and Results of Operations                        | 34  |
++| Item 7A. Quantitative and Qualitative Disclosures About Market Risk                                                  | 58  |
++| Item 8. Financial Statements and Supplementary Data                                                                  | 60  |
++| Item 9. Changes in and Disagreements with Accountants on Accounting and Financial Disclosure                         | 129 |
++| Item 9A. Controls and Procedures                                                                                     | 129 |
++| Item 9B. Other Information                                                                                           | 129 |
++| Item 9C. Disclosure Regarding Foreign Jurisdictions That Prevent Inspections                                         | 129 |
++| **Part III**                                                                                                         |     |
++| Item 10. Directors, Executive Officers and Corporate Governance                                                      | 129 |
++| Item 11. Executive Compensation                                                                                      | 129 |
++| Item 12. Security Ownership of Certain Beneficial Owners and Management and Related Stockholder Matters              | 130 |
++| Item 13. Certain Relationships and Related Transactions, and Director Independence                                   | 130 |
++| Item 14. Principal Accountant Fees and Services                                                                      | 130 |
++| **Part IV**                                                                                                          |     |
++| Item 15. Exhibits and Financial Statement Schedules                                                                  | 130 |
++| Item 16. Form 10-K Summary                                                                                           | 139 |
++| Signatures                                                                                                           | 140 |
++
++
++
++
++
++
++# FORWARD-LOOKING STATEMENTS
++
++This report contains information that may constitute “forward-looking statements.” Generally, the words “believe,” “expect,” “intend,” “estimate,” “anticipate,” “project,” “will” and similar expressions identify forward-looking statements, which generally are not historical in nature. However, the absence of these words or similar expressions does not mean that a statement is not forward-looking. All statements that address operating performance, events or developments that we expect or anticipate will occur in the future — including statements relating to volume growth, share of sales and net income per share growth, and statements expressing general views about future operating results — are forward-looking statements.
++
++Management believes that these forward-looking statements are reasonable as and when made. However, caution should be taken not to place undue reliance on any such forward-looking statements because such statements speak only as of the date when made. Our Company undertakes no obligation to publicly update or revise any forward-looking statements, whether as a result of new information, future events or otherwise, except as required by law. In addition, forward-looking statements are subject to certain risks and uncertainties that could cause our Company’s actual results to differ materially from historical experience and our present expectations or projections. These risks and uncertainties include, but are not limited to, the possibility that the assumptions used to calculate our estimated aggregate incremental tax and interest liability related to the potential unfavorable outcome of the ongoing tax dispute with the United States Internal Revenue Service could significantly change; those described in Part I, “Item 1A. Risk Factors” and elsewhere in this report; and those described from time to time in our future reports filed with the Securities and Exchange Commission.
++
++# Part I
++
++# ITEM 1. BUSINESS
++
++In this report, the terms “The Coca-Cola Company,” “Company,” “we,” “us” and “our” mean The Coca-Cola Company and all entities included in our consolidated financial statements.
++
++# General
++
++The Coca-Cola Company is a total beverage company, and beverage products bearing our trademarks, sold in the United States since 1886, are now sold in more than 200 countries and territories. We own or license and market numerous beverage brands, which we group into the following categories: Trademark Coca-Cola; sparkling flavors; water, sports, coffee and tea; juice, value-added dairy and plant-based beverages; and emerging beverages. We own and market several of the world’s largest nonalcoholic sparkling soft drink brands, including Coca-Cola, Sprite, Fanta, Coca-Cola Zero Sugar and Diet Coke/Coca-Cola Light.
+ 
+@@ -168,3 +185,3 @@
+ - Done Sustainably. We grow our business in ways that achieve positive change in the world and build a more sustainable future for our planet.
+-- For a Better Shared Future. We invest to improve people's lives, from our employees to all those who touch our business system, to our investors, to the communities we call home.
++- For a Better Shared Future. We invest to improve people’s lives, from our employees to all those who touch our business system, to our investors, to the communities we call home.
+ 
+@@ -172,11 +189,10 @@
+ 
+-## FORWARD-LOOKING STATEMENTS
+-
+-This report contains information that may constitute 'forward-looking statements.' Generally, the words 'believe,' 'expect,' 'intend,' 'estimate,' 'anticipate,' 'project,' 'will' and similar expressions identify forward-looking statements, which generally are not historical in nature. However, the absence of these words or similar expressions does not mean that a statement is not forward-looking. All statements that address operating performance, events or developments that we expect or anticipate will occur in the future - including statements relating to volume growth, share of sales and net income per share growth, and statements expressing general views about future operating results - are forward-looking statements. Management believes that these forward-looking statements are reasonable as and when made. However, caution should be taken not to place undue reliance on any such forward-looking statements because such statements speak only as of the date when made. Our Company undertakes no obligation to publicly update or revise any forward-looking statements, whether as a result of new information, future events or otherwise, except as required by law. In addition, forward-looking statements are subject to certain risks and uncertainties that could cause our Company's actual results to differ materially from historical experience and our present expectations or projections. These risks and uncertainties include, but are not limited to, the possibility that the assumptions used to calculate our estimated aggregate incremental tax and interest liability related to the potential unfavorable outcome of the ongoing tax dispute with the United States Internal Revenue Service could significantly change; those described in Part I, 'Item 1A. Risk Factors' and elsewhere in this report; and those described from time to time in our future reports filed with the Securities and Exchange Commission.
+-
+-## Part I
+-
+-## Operating Segments
+-
+-The Company's operating structure is the basis for our internal financial reporting. Our operating structure includes the following operating segments:
++
++
++
++
++
++# Operating Segments
++
++The Company’s operating structure is the basis for our internal financial reporting. Our operating structure includes the following operating segments:
+ 
+@@ -193,3 +209,3 @@
+ 
+-For additional information about our operating segments and Corporate, refer to Note 20 of Notes to Consolidated Financial Statements set forth in Part II, 'Item 8. Financial Statements and Supplementary Data' of this report.
++For additional information about our operating segments and Corporate, refer to Note 20 of Notes to Consolidated Financial Statements set forth in Part II, “Item 8. Financial Statements and Supplementary Data” of this report.
+ 
+@@ -197,3 +213,3 @@
+ 
+-## Products and Brands
++# Products and Brands
+ 
+@@ -201,7 +217,7 @@
+ 
+-- 'concentrates' means flavorings and other ingredients which, when combined with water and, depending on the product, sweeteners (nutritive or non-nutritive) are used to prepare syrups or finished beverages, and includes powders/minerals for purified water products;
+-- 'syrups' means intermediate products in the beverage manufacturing process produced by combining concentrates with water and, depending on the product, sweeteners (nutritive or non-nutritive);
+-- 'fountain syrups' means syrups that are sold to fountain retailers, such as restaurants and convenience stores, which use dispensing equipment to mix the syrups with sparkling or still water at the time of purchase to produce finished beverages that are served in cups or glasses for immediate consumption;
+-- 'Company Trademark Beverages' means beverages bearing our trademarks and certain other beverages bearing trademarks licensed to us by third parties for which we provide marketing support and from the sale of which we derive an economic benefit; and
+-- 'Trademark Coca-Cola Beverages' or 'Trademark Coca-Cola' means nonalcoholic beverages bearing the trademark Coca-Cola or any trademark that includes Coca-Cola or Coke (that is, Coca-Cola, Diet Coke/Coca-Cola Light and Coca-Cola Zero Sugar and all their variations and any line extensions, including caffeine free Diet Coke, Cherry Coke, etc.). Likewise, when we use the capitalized word 'Trademark' together with the name of one of our other beverage products (such as 'Trademark Fanta,' 'Trademark Sprite' or 'Trademark Simply'), we mean nonalcoholic beverages bearing the indicated trademark (that is, Fanta, Sprite or Simply, respectively) and all its variations and line extensions (such that 'Trademark Fanta' includes Fanta Orange, Fanta Zero Orange, Fanta Zero Sugar, Fanta Apple, etc.; 'Trademark Sprite' includes Sprite, Sprite Zero Sugar, etc.; and 'Trademark Simply' includes Simply Orange, Simply Apple, Simply Grapefruit, etc.).
++- “concentrates” means flavorings and other ingredients which, when combined with water and, depending on the product, sweeteners (nutritive or non-nutritive) are used to prepare syrups or finished beverages, and includes powders/minerals for purified water products;
++- “syrups” means intermediate products in the beverage manufacturing process produced by combining concentrates with water and, depending on the product, sweeteners (nutritive or non-nutritive);
++- “fountain syrups” means syrups that are sold to fountain retailers, such as restaurants and convenience stores, which use dispensing equipment to mix the syrups with sparkling or still water at the time of purchase to produce finished beverages that are served in cups or glasses for immediate consumption;
++- “Company Trademark Beverages” means beverages bearing our trademarks and certain other beverages bearing trademarks licensed to us by third parties for which we provide marketing support and from the sale of which we derive an economic benefit;
++- “Trademark Coca-Cola Beverages” or “Trademark Coca-Cola” means nonalcoholic beverages bearing the trademark Coca-Cola or any trademark that includes Coca-Cola or Coke (that is, Coca-Cola, Diet Coke/Coca-Cola Light and Coca-Cola Zero Sugar and all their variations and any line extensions, including caffeine free Diet Coke, Cherry Coke, etc.). Likewise, when we use the capitalized word “Trademark” together with the name of one of our other beverage products (such as “Trademark Fanta,” “Trademark Sprite” or “Trademark Simply”), we mean nonalcoholic beverages bearing the indicated trademark (that is, Fanta, Sprite or Simply, respectively) and all its variations and line extensions (such that “Trademark Fanta” includes Fanta Orange, Fanta Zero Orange, Fanta Zero Sugar, Fanta Apple, etc.; “Trademark Sprite” includes Sprite, Sprite Zero Sugar, etc.; and “Trademark Simply” includes Simply Orange, Simply Apple, Simply Grapefruit, etc.).
+ 
+@@ -209,2 +225,3 @@
+ 
+-Our concentrate operations typically generate net operating revenues by selling beverage concentrates, sometimes referred to as 'beverage bases,' syrups, including fountain syrups, and certain finished beverages to authorized bottling operations (to which we typically refer as our 'bottlers' or our 'bottling partners'). Our bottling partners either combine concentrates with still or+Our concentrate operations typically generate net operating revenues by selling beverage concentrates, sometimes referred to as “beverage bases,” syrups, including fountain syrups, and certain finished beverages to authorized bottling operations (to which we typically refer as our “bottlers” or our “bottling partners”). Our bottling partners either combine concentrates with still or
++
