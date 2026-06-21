@@ -21,10 +21,10 @@ Unlike traditional OCR benchmarks that only measure extraction quality, DocParse
 
 | Parser | Pages/Sec | Peak RAM (MB) | WER | Table Fidelity | Heading Score | Reading Order |
 |---|---|---|---|---|---|---|
-| liteparse | 0.00 | 0.00 | N/A | N/A | N/A | N/A |
-| pymupdf | 2.71 | 402.02 | 0.155 | 79.63% | 1.65% | 35.99% |
-| llamaparse | 6.93 | 150.07 | 0.000 | 100.00% | 100.00% | 100.00% |
+| liteparse | 4.51 | 783.46 | 0.135 | 95.60% | 1.43% | 15.83% |
 | docling | 0.20 | 2276.68 | 0.190 | 100.00% | 0.00% | 40.39% |
+| llamaparse | 6.93 | 150.07 | 0.000 | 100.00% | 100.00% | 100.00% |
+| pymupdf | 2.71 | 402.02 | 0.155 | 79.63% | 1.65% | 35.99% |
 
 ---
 
