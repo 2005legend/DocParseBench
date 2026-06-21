@@ -1,0 +1,7 @@
+docling
+liteparse
+marker-pdf
+pymupdf4llm
+llama-parse
+llama-index
+psutil
