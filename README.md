@@ -27,6 +27,16 @@ This benchmark emphasizes *scalability engineering*. Heavy vision models can pro
 
 *Note: Docling can process arbitrarily large PDFs if batch/page-range processing is used, assuming sufficient disk space and processing time. Runtime and storage will grow linearly, but peak memory stays roughly constant.*
 
+### 🔍 Case Study: 300-Page SEC 10-K Stress Test
+We ran an extreme 300-page financial filing through our benchmark to evaluate quality degradation at scale:
+
+| Parser | Word Error Rate | Table Fidelity | Heading Score |
+|---|---|---|---|
+| **Docling (Batched)** | 0.072 | **98.7%** | 50.1% |
+| **Liteparse** | 0.086 | **0.0%** | 0.0% |
+
+**The Tradeoff:** While both parsers extracted raw text with similar accuracy (~7-8% error), Liteparse **completely failed** to preserve any tables or markdown heading structures across the 300 pages. Docling reconstructed an astonishing 98.7% of the tables, proving its necessity for complex RAG pipelines where table context is critical—even if it requires batched processing to avoid memory crashes.
+
 ---
 
 ## 🏆 Current Leaderboard Snapshot
