@@ -19,13 +19,12 @@ Unlike traditional OCR benchmarks that only measure extraction quality, DocParse
 
 *Note: Below is an estimation snapshot. Run the orchestrator locally on your hardware to generate your specific performance bounds.*
 
-| Parser | Speed | Peak RAM | Tables Fidelity | OCR Quality | RAG Suitability |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **LlamaParse (API)** | Varies | Low (Cloud) | 🟢 Excellent | 🟢 Excellent | High |
-| **Docling** | 🔴 Slow (~3s/pg) | 🔴 High (>4GB) | 🟢 Excellent | 🟢 Excellent | High |
-| **Marker** | 🔴 Slow | 🔴 High | 🟢 Excellent | 🟢 Excellent | High |
-| **PyMuPDF4LLM** | 🟡 Fast | 🟢 Low | 🟡 Medium | 🔴 None | Medium |
-| **LiteParse** | 🟢 Very Fast | 🟢 Low | 🔴 Poor | 🔴 None | Low/Medium |
+| Parser | Pages/Sec | Peak RAM (MB) | WER | Table Fidelity | Heading Score | Reading Order |
+|---|---|---|---|---|---|---|
+| liteparse | 0.00 | 0.00 | N/A | N/A | N/A | N/A |
+| pymupdf | 2.71 | 402.02 | 0.155 | 79.63% | 1.65% | 35.99% |
+| llamaparse | 6.93 | 150.07 | 0.000 | 100.00% | 100.00% | 100.00% |
+| docling | 0.20 | 2276.68 | 0.190 | 100.00% | 0.00% | 40.39% |
 
 ---
 

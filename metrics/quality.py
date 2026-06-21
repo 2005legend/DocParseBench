@@ -9,31 +9,17 @@ class QualityEvaluator:
         self.results_dir = results_dir
         
     def _calculate_wer(self, ref: str, hyp: str) -> float:
-        """Calculate Word Error Rate using native Python dynamic programming."""
+        """Calculate an approximate Word Error Rate using difflib to prevent hanging on massive documents."""
         ref_words = ref.split()
         hyp_words = hyp.split()
         
-        d = [[0] * (len(hyp_words) + 1) for _ in range(len(ref_words) + 1)]
-        
-        for i in range(len(ref_words) + 1):
-            d[i][0] = i
-        for j in range(len(hyp_words) + 1):
-            d[0][j] = j
-            
-        for i in range(1, len(ref_words) + 1):
-            for j in range(1, len(hyp_words) + 1):
-                if ref_words[i - 1] == hyp_words[j - 1]:
-                    d[i][j] = d[i - 1][j - 1]
-                else:
-                    substitution = d[i - 1][j - 1] + 1
-                    insertion    = d[i][j - 1] + 1
-                    deletion     = d[i - 1][j] + 1
-                    d[i][j] = min(substitution, insertion, deletion)
-                    
         if len(ref_words) == 0:
             return float('inf') if len(hyp_words) > 0 else 0.0
             
-        return d[len(ref_words)][len(hyp_words)] / len(ref_words)
+        sm = difflib.SequenceMatcher(None, ref_words, hyp_words)
+        # SequenceMatcher gives ratio = 2 * M / (T)
+        # Error can be roughly approximated as 1 - ratio
+        return 1.0 - sm.ratio()
 
     def _extract_tables(self, md_text: str):
         """Extract markdown tables. Returns a list of tables, where each table is a list of rows."""
@@ -123,7 +109,8 @@ class QualityEvaluator:
         
         for dataset in manifest.get('datasets', []):
             dataset_id = dataset['id']
-            ground_truth_path = os.path.join(os.path.dirname(self.manifest_path), '..', dataset.get('ground_truth_path', ''))
+            # Ground truth paths are relative to the manifest directory (e.g. 'ground_truth/filename.md')
+            ground_truth_path = os.path.join(os.path.dirname(self.manifest_path), dataset.get('ground_truth_path', ''))
             
             if not os.path.exists(ground_truth_path):
                 continue

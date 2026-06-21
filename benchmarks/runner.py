@@ -19,7 +19,9 @@ def run_benchmark(manifest_path, parsers, output_dir):
     
     for dataset in datasets:
         dataset_id = dataset['id']
-        file_path = os.path.join(os.path.dirname(manifest_path), '..', dataset['file_path'])
+        # The manifest is in datasets/manifest.json. 
+        # file_path is 'pdfs/filename.pdf'
+        file_path = os.path.join(os.path.dirname(manifest_path), dataset['file_path'])
         file_path = os.path.abspath(file_path)
         
         results[dataset_id] = {'pages': dataset['pages'], 'category': dataset['category'], 'runs': {}}
