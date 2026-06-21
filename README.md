@@ -32,10 +32,10 @@ We ran an extreme 300-page financial filing through our benchmark to evaluate qu
 
 | Parser | Word Error Rate | Table Fidelity | Heading Score |
 |---|---|---|---|
-| **Docling (Batched)** | 0.072 | **98.7%** | 50.1% |
-| **Liteparse** | 0.086 | **0.0%** | 0.0% |
+| **Docling (Batched)** | **0.072** | **98.7%** | **50.1%** |
+| **Liteparse (Markdown Mode)** | 0.163 | 98.3% | 21.0% |
 
-**The Tradeoff:** While both parsers extracted raw text with similar accuracy (~7-8% error), Liteparse **completely failed** to preserve any tables or markdown heading structures across the 300 pages. Docling reconstructed an astonishing 98.7% of the tables, proving its necessity for complex RAG pipelines where table context is critical—even if it requires batched processing to avoid memory crashes.
+**The Real Tradeoff:** When configured correctly, Liteparse *is* capable of extracting tables (98.3%). The true tradeoff is in semantic preservation and text accuracy. To achieve its blazing speed, Liteparse sacrifices Heading Structure (dropping from Docling's 50% to 21%) and introduces over double the Word Error Rate (16.3% vs 7.2%) on complex documents. Docling remains the gold standard for high-fidelity RAG ingestion, provided you implement batching to prevent memory crashes.
 
 ---
 
